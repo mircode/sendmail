@@ -1,0 +1,8 @@
+[2015-04-21 09/:58/:55] [INFO ] com.sendmail.main.MailSend(line/:105) -SpringÈÝÆ÷Æô¶¯....
+[2015-04-21 09/:58/:55] [INFO ] org.springframework.context.support.ClassPathXmlApplicationContext(line/:510) -Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7d49fa1e: startup date [Tue Apr 21 09:58:55 CST 2015]; root of context hierarchy
+[2015-04-21 09/:58/:55] [INFO ] org.springframework.beans.factory.xml.XmlBeanDefinitionReader(line/:315) -Loading XML bean definitions from class path resource [applicationContext.xml]
+[2015-04-21 09/:58/:56] [INFO ] org.springframework.beans.factory.xml.XmlBeanDefinitionReader(line/:315) -Loading XML bean definitions from class path resource [serviceContext.xml]
+[2015-04-21 09/:58/:56] [INFO ] org.springframework.beans.factory.xml.XmlBeanDefinitionReader(line/:315) -Loading XML bean definitions from class path resource [daoContext.xml]
+[2015-04-21 09/:58/:56] [INFO ] org.springframework.beans.factory.xml.XmlBeanDefinitionReader(line/:315) -Loading XML bean definitions from class path resource [quartz.xml]
+[2015-04-21 09/:58/:56] [INFO ] com.sendmail.override.CustomPropertyConfigurer(line/:177) -Loading properties file from URL [file:D:/Program Files (x86)/Java/Eclipse/workspace/MailSend_Maven/conf//mail.properties]
+[2015-04-21 09/:58/:56] [INFO ] org.springframework.beans.factory.support.DefaultListableBeanFactory(line/:444) -Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@266f4689: defining beans [propertyConfigurer,mailSender,simpleMailMessage,velocityEngine,mailSenderService,org.springframework.scheduling.quartz.SchedulerFactoryBean#0,sendMailTrigger,sendMailJobDetail,sendMailJob]; root of factory hierarchy

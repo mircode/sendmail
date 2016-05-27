@@ -1,0 +1,8 @@
+<html>
+<head>
+</head>
+<body>
+${mail_content}<br>
+<img src=cid:image/>
+</body>
+</html>

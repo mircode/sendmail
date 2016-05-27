@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    
+    <!--加载SMTP服务器配置文件-->
+	<bean id="propertyConfigurer" class="com.sendmail.override.CustomPropertyConfigurer">
+		 <property name="locations">
+		 	<list>
+		  		<value>file:${SENDMAIL_CONF_DIR}/mail.properties</value>
+		  	</list>
+		 </property>
+	</bean>
+    
+	
+	<!--加载Service Dao Quartz配置文件-->
+    <import resource="serviceContext.xml"/>
+    <import resource="daoContext.xml"/> 
+    <import resource="quartz.xml"/>
+	
+</beans>

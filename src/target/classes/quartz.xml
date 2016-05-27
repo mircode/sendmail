@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!--Spring定时任务配置文件 -->
+	
+	<!--Scheduler的配置 -->
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">  
+	       <property name="triggers">  
+	           <list>  
+	              <ref bean="sendMailTrigger"/>  
+	           </list>  
+	       </property>  
+	       <property name="autoStartup" value="true"/>  
+	</bean>
+	
+	<!-- Trigger的配置-->
+	<bean id="sendMailTrigger" class="com.sendmail.override.MailCronTrigger">  
+       <property name="jobDetail" ref="sendMailJobDetail"/>  
+       <property name="cronExpression" value="0 0 0 * * ?"/><!-- 每隔10秒钟触发一次 -->  
+	</bean> 
+	
+	<!--JobDetail的配置-->
+	<bean id="sendMailJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">   
+        <property name="targetObject" ref="sendMailJob"/>  
+        <property name="targetMethod" value="execute"/>  
+        <property name="concurrent" value="false"/>
+        <!-- 是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程 -->  
+	</bean>
+
+	<!-- 发送邮件Job  -->
+	<bean id="sendMailJob" class="com.sendmail.job.MailSendJob">
+		<property name="mailSenderService" ref="mailSenderService"/>  
+	</bean> 
+
+  </beans> 
+    

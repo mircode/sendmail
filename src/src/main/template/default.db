@@ -1,0 +1,41 @@
+{
+	"mail_subject":"a mail for test",
+	"mail_form":"1607646162@qq.com",
+	"mail_to":["3086331579@qq.com","3173506830@qq.com"],
+	
+	
+	"mail_content":"static info",
+	
+	"mail_images":[
+		 {
+			 "image": {
+			  "columnKeys": [
+				""
+			  ], 
+			  "columnName": "visit nums", 
+			  "data": [
+				[
+				  1320.0
+				], 
+				[
+				  720.0
+				], 
+				[
+				  830.0
+				], 
+				[
+				  400.0
+				]
+			  ], 
+			  "rowKeys": [
+				"user1", 
+				"user2", 
+				"user3", 
+				"user4"
+			  ], 
+			  "rowName": "user", 
+			  "title": "user visit statisic"
+			}
+		}
+	]
+}
